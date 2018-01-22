@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<profiles>
+    <profile>
+        <id>azure</id>
+        <properties>
+            <azureFtpUrl>ftp://waws-prod-bay-063.ftp.azurewebsites.windows.net/site/wwwroot</azureFtpUrl>
+        </properties>
+    </profile>
+</profiles>
+<servers>
+    <server>
+        <id>petclinic</id>
+        <username>petclinicDocker\avinash514</username>
+        <password>FE7k1KuktRaf5uvdHhEZCbQSk8axhPSTRcsKQ8jofkDAjDhdmqXA33Zts4gK</password>
+    </server>
+    
+   </servers>
+    <configuration>
+     <fromFile>${basedir}/target/AzureAppDemo-0.0.1-SNAPSHOT.war</fromFile>
+     <url>ftp://waws-prod-bay-063.ftp.azurewebsites.windows.net/site/wwwroot</url>
+     <toFile>webapps/ROOT.war</toFile>
+     <serverId>petclinic</serverId>
+   </configuration>
+
+<activeProfiles>
+    <activeProfile>azure</activeProfile>
+</activeProfiles>
+</settings>
